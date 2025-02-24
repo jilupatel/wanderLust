@@ -1,0 +1,796 @@
+/* ul {  
+    list-style-type: none;  
+    }  
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        padding: 20px; 
+        margin: 0 auto; 
+      }
+      
+      .bold-label {
+        font-weight: bold;
+      }
+      
+      
+      .container img {
+        max-width: 100%; 
+        height: 180px;
+      }
+
+      .disabled-button {
+        background-color: #e0e0e0;  
+        border: 1px solid #d0d0d0;
+        color: #a0a0a0; 
+        cursor: not-allowed; 
+      }
+      
+      .disabled-button:focus {
+        outline: none;
+      }
+
+      .disabled-button :hover {
+        background-color: #e0e0e0;
+      } */
+
+      .carousel-arrow:disabled {
+        opacity: 0.2;
+        cursor: not-allowed;
+      }
+
+      .image-upload-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .image-upload-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+      }
+      
+      .image-carousel {
+        margin-top: 20px;
+      }
+      
+      .carousel-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      
+      .image-row {
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+        width: 1200px;
+        justify-content: center;
+      }
+      
+      .image-item {
+        /* flex: 0 0 300px;  */
+        text-align: center;
+      }
+      
+      .carousel-arrow {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .carousel-arrow.left {
+        left: -30px;
+      }
+      
+      .carousel-arrow.right {
+        right: -30px;
+      }
+      
+      .host-profile-picture {
+        width: 100px !important;
+        height: 100px !important;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .listing-detail-page footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 100px; /* Match the padding-bottom value */
+        background: #f8f9fa;
+        border-top: 2px solid black !important;
+        border-top: 1px solid #dee2e6;
+      }
+      .rating-actions {
+        margin-left: auto;
+        display: flex;
+        gap: 8px;
+      }
+      
+      .edit-button,
+      .delete-button {
+        padding: 4px 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .edit-button {
+        background-color: #4caf50;
+        color: white;
+      }
+      
+      .delete-button {
+        background-color: #f44336;
+        color: white;
+      }
+      
+      .edit-rating-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .edit-rating-actions {
+        display: flex;
+        gap: 8px;
+      }
+      
+      .save-button,
+      .cancel-button {
+        padding: 4px 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .save-button {
+        background-color: #4caf50;
+        color: white;
+      }
+      
+      .cancel-button {
+        background-color: #f44336;
+        color: white;
+      }
+      
+      .ratings-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .rating-box {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 16px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .rating-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+      
+      .rating-header i {
+        font-size: 20px;
+        color: #007bff;
+        margin-right: 8px;
+      }
+      
+      .rating-header .username {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .star-rating {
+        margin-bottom: 12px;
+      }
+      
+      .star-rating .star {
+        font-size: 20px;
+        color: #ddd;
+        cursor: default;
+      }
+      
+      .star-rating .star.filled {
+        color: #ffc107;
+      }
+      
+      .rating-description {
+        font-size: 14px;
+        color: #555;
+        margin: 0;
+        text-align: left;
+      }
+
+/* Reset the default list style for 'ul' */
+.listing-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.listing-details {
+  flex: 1;
+  padding: 20px;
+  /* background: white; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.listing-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.reserve-button {
+  background-color: #ff6200;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.reserve-button:hover {
+  background-color: #ff4500;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #555;
+}
+
+.delete-button:hover {
+  background-color: red;
+}
+
+.reservation-form-container {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  /* Remove left padding */
+  margin: 20px 0;
+  /* Add margin for spacing */
+}
+
+ul li {
+  margin-bottom: 15px;
+  /* Add some space between each list item */
+  font-size: 16px;
+  /* Slightly smaller font size for better readability */
+  line-height: 1.5;
+  /* Increase line height for better text spacing */
+}
+
+.bold-label {
+  font-weight: bold;
+  color: #333;
+  /* Dark text color for better contrast */
+}
+
+/* Main container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  /* padding: 30px; */
+  padding: 0px;
+  /* Extra padding for spacious layout */
+  margin: 80px auto;
+  max-width: 1200px;
+  /* Limit the width for better alignment */
+}
+
+/* Image styling */
+.container img {
+  /* max-width: 100%; */
+  height: auto;
+  /* border-radius: 10px; */
+  margin-bottom: 20px;
+}
+
+/* Buttons styling */
+button {
+  background-color: #007BFF;
+  /* Bright blue color for primary buttons */
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 3px;
+  /* Add spacing between buttons */
+  /* transition: background-color 0.3s ease; */
+  /* Smooth transition on hover */
+}
+
+button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+button:focus {
+  outline: none;
+  /* Remove the outline on focus */
+}
+
+/* Disabled button styling */
+.disabled-button {
+  background-color: #e0e0e0;
+  /* Light gray background */
+  border: 1px solid #d0d0d0;
+  /* Lighter border */
+  color: #a0a0a0;
+  /* Gray text */
+  cursor: not-allowed;
+  /* Show a "not allowed" cursor */
+  opacity: 0.6;
+  /* Slightly faded appearance */
+}
+
+.disabled-button:focus {
+  outline: none;
+  /* Remove focus outline for disabled buttons */
+}
+
+.disabled-button:hover {
+  background-color: #e0e0e0;
+  /* No hover effect for disabled buttons */
+}
+
+/* Styling for the reservation table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  /* Light border for table rows */
+}
+
+table th {
+  background-color: #f1f1f1;
+  /* Light gray background for table headers */
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+  /* Alternating row colors for better readability */
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+  /* Highlight row on hover */
+}
+
+/* Map container */
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  /* Rounded corners for the map container */
+  margin-top: 30px;
+}
+
+/* Additional styling for reservation form */
+input[type="text"],
+input[type="date"] {
+  padding: 8px;
+  font-size: 16px;
+  margin: 5px 0;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #000;
+  /* Change border color on focus */
+  outline: none;
+}
+
+/* Styling for the "Actions Disabled" text */
+.actions-disabled {
+  color: #a0a0a0;
+  /* Light gray text */
+  font-style: italic;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 24px;
+  color: gray;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.rating-description {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-rating-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-rating-button:hover {
+  background-color: #0056b3;
+}
+
+/* Host Profile Section */
+.host-profile-section {
+  /* margin: 2rem 0; */
+  padding: 1.5rem;
+  background: #fff;
+  align-items: left;
+  justify-content: flex-start; /* Aligns items to the left */
+  /* align-items: flex-start; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 2px 15px rgba(0,0,0,0.1); */
+}
+
+.host-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.host-profile-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.host-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.host-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: none;
+  /* border: 2px dashed #ddd; */
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.host-profile-button:hover {
+  /* border-color: #007bff; */
+  background: #f8f9fa;
+}
+
+.host-profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+}
+
+.default-profile-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #6c757d;
+}
+
+.host-profile-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.host-profile-display {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.host-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 20px; 
+  margin-top: -10px;
+  right: 500px;
+  top: 60px; 
+}
+
+.host-profile-bio {
+  text-align: justify;
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.host-info h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.host-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  /* margin-top: 1rem; */
+  color: #666;
+}
+
+.host-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.superhost-badge {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.superhost-badge i {
+  color: #FF385C;
+  margin-right: 8px;
+}
+
+.superhost-description {
+  text-align: justify;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.message-host-button {
+  background: #FF385C;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  /* transition: background 0.3s ease; */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.message-host-button:hover {
+  background: #E31C5F;
+}
+
+.message-host-button i {
+  font-size: 1.1rem;
+}
+
+.response-info {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.response-info div {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.response-info strong {
+  color: #000;
+  font-weight: 600;
+}
+
+.host-profile-email,
+.host-profile-address {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  margin-right: 8px;
+  color: #333;
+  font-size: 14px;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.host-contact p {
+  /* margin: 0.5rem 0; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Host Profile Form */
+.host-profile-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 15px rgba(0,0,0,0.1); */
+}
+
+.host-profile-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.host-profile-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.host-profile-form input[type="text"],
+.host-profile-form input[type="email"],
+.host-profile-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.listing-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Styling the Host Profile Section */
+.host-profile-section {
+  /* width: 100%; */
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Host Profile Card */
+.host-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.host-profile-address i,
+.host-profile-email i {
+  margin-right: 8px;
+  color: #666;
+}
+
+/* Profile Picture */
+.host-profile-picture {
+  width: 150px;
+  height: 500px;
+  border-radius: 50% !important;
+  object-fit: cover;
+}
+
+/* Default Profile Icon */
+.default-profile-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: #f0f0f0;
+}
+
+/* Host Name */
+.host-profile-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.upload_gallery {
+  margin-right: 1200px;
+  background-color: white;
+  color: #000;
+  border: 1px solid black;
+}
+
+/* .show_button {
+  margin-top: 500px;
+  margin-left: -180px;
+  margin: "0px";
+} */

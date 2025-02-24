@@ -1,0 +1,160 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  /* transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out; */
+
+  /* transform: transform 0.3s; */
+  z-index: 1001; /* Ensure it's above the navbar */
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%); /* Sidebar is closed */
+}
+
+.close-btn {
+  margin-top: 120px; 
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+h2 {
+  margin-top: 150px; /* Ensure enough space for the close button */
+  padding-top: 20px;
+  margin-left: 10px;
+}
+
+h2 a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+h2 i {
+  font-size: 32px; /* Size for user icon */
+}
+
+
+/* Menu Button */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.sidebar .menu-btn i {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.sidebar .menu-btn .fa-chevron-up,
+.sidebar .menu-btn .fa-chevron-down {
+  font-size: 12px;
+}
+
+.sidebar .menu-btn .admin-text {
+  font-size: 18px;
+}
+
+.sidebar .submenu {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 1px;
+}
+
+.sidebar .submenu li {
+  margin: 0px 0px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding-left: 20px;
+  padding: 5px;
+  border-bottom: 1px solid #555;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* .sidebar ul li:hover {
+  background: #495057;
+} */
+
+.close-btn {
+  position: absolute;
+  top: 28px;
+  right: 15px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+/* MainNavbar Custom Styles */
+.navbar .navbar-nav.ms-auto  {
+  margin-left: auto; /* Push links to the right */
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-nav .nav-link {
+  margin-right: 15px; /* Add some spacing between links */
+  color: #333; /* Customize link color */
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+
+/* Adjust navbar height for better alignment */
+/* .navbar {
+  height: 60px;
+  min-height: 70px;
+} */
+
+/* Center the dropdown and search in the middle */
+.navbar .d-flex {
+  /* flex-grow: 1; */
+  height: 50px;
+}

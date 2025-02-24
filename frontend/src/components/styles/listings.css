@@ -1,0 +1,48 @@
+.listings-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .listings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .listings-table th,
+  .listings-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .listings-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .listings-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .listings-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

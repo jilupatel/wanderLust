@@ -1,0 +1,26 @@
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .google-btn i {
+    margin-right: 10px;
+    color: #db4437; /* Google Red */
+    font-size: 20px;
+  }
+  
+  .google-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    /* border-color: black; */
+  }
+  

@@ -1,0 +1,185 @@
+.table th, .table td {
+  padding: 5px;
+  text-align: center;
+}
+
+.help-center {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.help-center textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.help-center button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.help-center button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.answer {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.dropdown-item {
+  color: #343a40;
+}
+/* Ensure all table rows have the same height */
+.table tbody tr {
+  height: 10px; /* Adjust this value as needed */
+}
+
+
+/* Ensure text content doesn't overflow */
+.table tbody td {
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+
+/* Alternate row colors */
+.table tbody tr:nth-child(odd) {
+  background-color: #8e959b; /* Light gray */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* White */
+}
+
+/* Hover effect */
+.table tbody tr:hover {
+  background-color: #e0e0e0; /* Slightly darker gray for hover */
+}
+
+
+
+/* Form container */
+.form-container {
+  background-color: white;
+  padding: 20px;
+  margin: 0px auto;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  width: 500px; 
+  max-width: 90%; /* Ensure it doesn't overflow on small screens */
+}
+
+
+.container {
+    /* margin-left: 260px; */
+    /* padding: 20px; */
+    transition: all 0.3s;
+  }
+
+  .container.sidebar-closed {
+    margin-left: 0;
+  }
+
+  .table th {
+    background-color: #343a40; /* Dark background for headers */
+    color: #ffffff; /* White text for headers */
+    padding: 10px;
+    text-align: center; /* Center text in headers */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+     
+  }
+  
+  
+  .table {
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    /* padding-left: 20px; */
+    margin-left: auto;  
+    margin-right: auto;  
+  }
+
+  .btn {
+    margin-right: 5px;
+  }
+  
+  
+  .menu-btn {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  .menu-btn i {
+    color: #343a40;
+  }
+  
+  .add-listing-form {
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 20px;
+  }
+  
+  .add-listing-form h3 {
+    margin-bottom: 10px;
+  }
+  
+  .add-listing-form input,
+  .add-listing-form textarea {
+    width: 100%;
+    padding: 8px;
+    /* margin-bottom: 10px; */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .add-listing-form button {
+    padding: 10px 20px;
+  }
+
+  
+  /* table {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+} */
+

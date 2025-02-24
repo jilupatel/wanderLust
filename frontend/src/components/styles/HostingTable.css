@@ -1,0 +1,44 @@
+/* Ensure table fits within the screen */
+.table-responsive {
+    overflow-x: auto;
+  }
+  
+  /* Set table layout to fixed to distribute columns evenly */
+  .hosting-table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Define column widths (adjust as needed) */
+  .hosting-table th, 
+  .hosting-table td {
+    padding: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+    vertical-align: middle;
+  }
+  
+  /* Prevent unnecessary horizontal scrolling */
+  .hosting-table th {
+    text-align: left;
+    background-color: #f8f9fa;
+  }
+  
+  /* Ensure images don't expand too much */
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hosting-table th, 
+    .hosting-table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

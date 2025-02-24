@@ -1,0 +1,95 @@
+/* Floating menu on the left */
+.navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #ebebeb !important;
+}
+
+.floating-menu {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 50px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    height: 100vh;
+  }
+
+  .dropdown-button {
+    padding: 12px 20px; 
+    font-size: 18px;
+  }
+  
+  .dropdown-menu {
+    font-size: 18px; 
+  }
+  
+  .search-container input {
+    height: 50px;
+    font-size: 16px;
+  }
+  
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .separator {
+    height: 30px;
+    width: 1px;
+    background-color: gray;
+    margin: 0 10px;
+  }
+  
+  
+  /* Floating menu icons */
+  .floating-menu .menu-icon {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 35px 0;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .floating-menu .menu-icon:hover {
+    color: #007bff;
+  }
+  
+  /* Sidebar appearance (adjust this if necessary) */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001;
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  /* Highlight active menu icon */
+.floating-menu .menu-icon.active {
+    color: #007bff;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,32 @@
+.reservation-container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .heading {
+    font-weight: bold;
+    font-size: 35px;
+    display: inline-block;
+    margin-left: 30px; /* Adjust space from icon */
+  }
+  
+  .back-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  .back-icon:hover {
+    color: #F37254; /* Change color on hover */
+  }
+  
+  .sub-heading {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+  

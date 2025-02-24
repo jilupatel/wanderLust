@@ -1,0 +1,72 @@
+/* General container styling */
+.profile-container {
+  margin: 0px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Profile header styling */
+.profile-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Profile card styling */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  background: none; /* No box-shadow */
+  margin-top: 20px;
+}
+
+/* Profile rows styling */
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.profile-row strong {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Profile picture styling */
+.profile-row img {
+  width: 100px;
+  height: 100px;
+  margin-top: 80px;
+  border-radius: 50%;
+  position: absolute; /* To position it at the top-left corner */
+  top: 70px; /* Adjust as needed */
+  left: 60px; /* Adjust as needed */
+  object-fit: cover;
+  border: 2px solid #ddd; /* Optional border */
+}
+
+/* Link styling */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Reset password and update information links styling */
+.profile-row a {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
